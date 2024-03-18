@@ -183,6 +183,12 @@ namespace TheArtOfDev.HtmlRenderer.Core.Utils
         {
             try
             {
+                if (!File.Exists(path) && !string.IsNullOrEmpty(TheArtOfDev.HtmlRenderer.Core.Handlers.TabulaExtensions.BaseUri))
+                {
+                    path = Path.Combine(TheArtOfDev.HtmlRenderer.Core.Handlers.TabulaExtensions.BaseUri, path);
+                }
+                    
+
                 return new FileInfo(path);
             }
             catch

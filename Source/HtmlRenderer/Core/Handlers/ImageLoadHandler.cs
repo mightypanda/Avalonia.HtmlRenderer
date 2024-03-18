@@ -22,6 +22,14 @@ using TheArtOfDev.HtmlRenderer.Core.Utils;
 
 namespace TheArtOfDev.HtmlRenderer.Core.Handlers
 {
+    public static class TabulaExtensions
+    {
+        public static string BaseUri { get; set; }
+    }
+}
+
+namespace TheArtOfDev.HtmlRenderer.Core.Handlers
+{
     /// <summary>
     /// Handler for all loading image logic.<br/>
     /// <p>
